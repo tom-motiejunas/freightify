@@ -1,5 +1,5 @@
 {
-  "name": "rest-api-ts",
-  "region": "us-east-1",
+  "name": "freightify",
+  "region": "eu-west-1",
   "main": "stacks/index.ts"
 }
