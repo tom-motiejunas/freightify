@@ -1,23 +1,47 @@
 {
   "name": "frontend",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "sst-env -- vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "cross-env NODE_OPTIONS=--max_old_space_size=4096 refine dev",
+    "build": "refine build",
+    "start": "refine start",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "refine": "refine"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   },
   "dependencies": {
+    "@mui/icons-material": "^5.11.0",
+    "@pankod/refine-cli": "^1.13.0",
+    "@pankod/refine-core": "3.90.6",
+    "@pankod/refine-inferencer": "^1.6.0",
+    "@pankod/refine-kbar": "0.10.2",
+    "@pankod/refine-mui": "3.61.2",
+    "@pankod/refine-nextjs-router": "^4.1.0",
+    "@pankod/refine-react-hook-form": "^3.37.0",
+    "@pankod/refine-simple-rest": "^3.37.4",
+    "casbin": "^5.19.3",
+    "next": "^13.0.6",
+    "next-compose-plugins": "^2.2.1",
+    "nookies": "^2.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@serverless-stack/static-site-env": "^1.15.0",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "@types/node": "^14.18.34",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@typescript-eslint/parser": "^4.33.0",
+    "cross-env": "^7.0.3",
+    "typescript": "^4.9.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "marked@<4.0.10": ">=4.0.10"
+    }
   }
 }

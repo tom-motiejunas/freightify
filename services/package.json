@@ -1,0 +1,15 @@
+{
+  "name": "@rest-api-ts/services",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {},
+  "dependencies": {
+    "@serverless-stack/node": "^1.18.4",
+    "aws-sdk": "^2.1246.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.108",
+    "@types/uuid": "^8.3.4"
+  }
+}
